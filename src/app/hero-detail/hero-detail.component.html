@@ -1,0 +1,17 @@
+<div *ngIf="hero"> <!-- SI seleccionamos a tal héroe, vemos sus detalles y podemos cambiarlos -->
+    <!-- ngIf hace que si no seleccionas nada, está vacio y no muestra nada, si seleccionas algo, agarra eso y le da valor a "selectedHero" y lo muestra -->
+    <button (click)="goBack()">Volver atrás</button> <!-- Botón para volver atrás -->
+    <button (click)="save()">Guardar cambios</button> <!-- Botón para guardar los cambios -->
+    <h2>{{hero.name | uppercase}} Details</h2>
+    <div>
+       <label for="hero-name">Nombre del héroe: </label> <!-- Escribimos lo que el input va a cambiar y lo mostramos -->
+       <input id="hero-name" [(ngModel)]="hero.name" placeholder="name"> <!-- Creamos un input para cambiar el NOMBRE -->
+    </div>
+    <div>
+        <label for="hero-id">ID del Héroe: </label> <!-- Escribimos lo que el input va a cambiar y lo mostramos -->
+        <input id="hero-id" [(ngModel)]="hero.id" placeholder="id"> <!-- Creamos un input para cambiar el ID -->
+    </div>
+    
+</div >
+
+
