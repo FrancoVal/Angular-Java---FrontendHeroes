@@ -11,7 +11,7 @@ import { HeroService } from '../hero.service';
 })
 export class HeroDetailComponent implements OnInit {
 
-  @Input() hero?: Hero; //"Input" permite que el componente padre se comunique con el componente hijo, y además lo puede modificar.
+  hero: Hero; //"Input" permite que el componente padre se comunique con el componente hijo, y además lo puede modificar.
                         // En este caso, hero-detail.components.ts es el hijo y hero.component.ts es el padre
 
   constructor(  private route: ActivatedRoute,
